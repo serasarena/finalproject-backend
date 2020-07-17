@@ -3,15 +3,15 @@ const router = express.Router();
 const ProductsModel = require('../models/ProductsModel');
 
 router.post(
-    '/',
+    '/products',
     (req, res) => {
         const formData = {
-            brand: req.body.brand, 
-            model: req.body.model,
-            price: req.body.price,
-            quantity: req.body.quantity,
+            salon: req.body.salon, 
+            description: req.body.description,
             image: req.body.image,
-            description: req.body.description
+            style: req.body.style,
+            price: req.body.price,
+            location: req.body.location
         };
         console.log(
             'From the user', formData
