@@ -34,7 +34,7 @@ const NavBar = () => {
                     <Link
                     to="/login"
                     className="btn btn-primary">
-                        Log in / Register
+                        Log in / Sign up
                     </Link>
                 }
 
@@ -42,7 +42,7 @@ const NavBar = () => {
                     globalState.loggedIn === true && 
                     <button onClick={logOut}
                     className="btn btn-primary">
-                        Log Out
+                        Log out
                     </button>
                 }
             </div>

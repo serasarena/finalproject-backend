@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 import { validEmail, validPassword } from './utils'; 
 import NavBar from './NavBar.js';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const RegistrationPage = () => {
 
@@ -108,7 +109,9 @@ const RegistrationPage = () => {
         return(
             <div>
                 <NavBar />
-                <h1>Registration</h1>
+                <FontAwesomeIcon icon="user-circle"/>
+                <h1>Sign up for your free account</h1>
+                <p>Get access to exclusive benefits for members only!</p>
 
                 <div className="container">
                     <div className="row">
@@ -151,7 +154,7 @@ const RegistrationPage = () => {
                                     id="exampleInputEmail1" 
                                     aria-describedby="emailHelp"/>
 
-                                    <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                                    <small id="emailHelp" className="form-text text-muted">We will never share your information with third parties or anyone else.</small>
                                 </div>
 
                                 <div className="form-group">
@@ -200,5 +203,4 @@ const RegistrationPage = () => {
         )
     }
 }
-
 export default RegistrationPage;
