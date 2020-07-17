@@ -2,17 +2,18 @@ const mongoose = require('mongoose');
 
 const ProductsSchema = new mongoose.Schema (
     {
-        brand: {
+        salon: {
             type: String,
             required: true
         }, 
         description: {
             type: String,
+            required: true
         },
         image: {
             type: String,
         },
-        model: {
+        style: {
             type: String, 
             required: true
         },
@@ -20,8 +21,8 @@ const ProductsSchema = new mongoose.Schema (
             type: Number,
             required: true
         },
-        quantity: {
-            type: Number,
+        location: {
+            type: String,
             required: true
         },
         

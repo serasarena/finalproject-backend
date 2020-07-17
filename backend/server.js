@@ -49,7 +49,7 @@ server.use(cors());
 
 passportJwt(passport);
 
-const dbURL = "mongodb+srv://Admin:katatonia@cluster.dinns.mongodb.net/finalproject?retryWrites=true&w=majority"
+const dbURL = "mongodb+srv://berniebernie:mongo1@cluster0-hlxyj.mongodb.net/testretryWrites=true&w=majority"
 
 mongoose.connect(
     dbURL, 
