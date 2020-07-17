@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 import AppContext from './AppContext';
 import NavBar from './NavBar.js';
+import './LoginPage.css';
 
 const LoginPage = () => {
 
@@ -63,7 +64,7 @@ const LoginPage = () => {
         return(
             <div>
                 <NavBar />
-                <h1>Login</h1>
+                <h1>Create an Account</h1>
 
                 <div className="container">
                     <div className="row">
