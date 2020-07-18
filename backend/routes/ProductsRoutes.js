@@ -11,7 +11,8 @@ router.post(
             image: req.body.image,
             style: req.body.style,
             price: req.body.price,
-            location: req.body.location
+            location: req.body.location,
+            review: req.body.review
         };
         console.log(
             'From the user', formData
@@ -27,14 +28,14 @@ router.post(
     '/update',
     (req, res) => {
         const formData = {
-            quantity: req.body.quantity,
+            price: req.body.price,
             _id: req.body._id
         };
 
         ProductsModel
         .findOneAndUpdate(
             { _id: formData._id }, 
-            { quantity: formData.quantity }, 
+            { price: formData.price }, 
             {}, 
             (err, document) => {
 

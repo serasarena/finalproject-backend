@@ -11,9 +11,15 @@ router.post(
         };
 
             const newEmailsModel = new EmailsModel (formData);
-            newEmailsModel.save();
-
-        res.json({message: 'Your Email has been saved!'});
+            newEmailsModel.save(
+                (err, result) => {
+                    if(err) {
+                        console.log('error', e)
+                    } else {
+                        res.json({message: 'Email has been saved!'});
+                    }
+                }
+            );
     }
 );
 

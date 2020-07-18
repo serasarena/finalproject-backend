@@ -2,9 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require('passport');
-    const JwtStrategy = require('passport-jwt').Strategy;
-    const ExtractJwt = require('passport-jwt').ExtractJwt;
-    const secret = "Srts3%$#Qtq";
+const JwtStrategy = require('passport-jwt').Strategy;
+const ExtractJwt = require('passport-jwt').ExtractJwt;
+const secret = "Srts3%$#Qtq";
 const cors = require('cors');
 const UsersModel = require('./models/UsersModel');
 
@@ -143,15 +143,15 @@ server.get(
     }
 );
 
-server.get(
-    '*',
-    (req, res) => {
-        res.send("<h1>Error: 404! Page not found!</h1>");
+// Route for 404
+server.get('*', (req, res)=> {
+    res.send('404! Page not found :(')
+});
+
+// Connect to port (range 3000 - 9999)
+// http://127.0.0.1:8080 (aka http://localhost:8080)
+server.listen( 
+    8080, ()=>{
+        console.log('You are connected http://127.0.0.1:8080!');
     }
 );
-
-server.listen( 8081, ()=>{
-    console.log('You are connected!');
-    }
- )
- 
