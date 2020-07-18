@@ -1,10 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+require('dotenv').config();
 const passport = require('passport');
     const JwtStrategy = require('passport-jwt').Strategy;
     const ExtractJwt = require('passport-jwt').ExtractJwt;
-    const secret = "Srts3%$#Qtq";
+    const secret = process.env.SECRET;
 const cors = require('cors');
 const UsersModel = require('./models/UsersModel');
 
@@ -49,7 +50,7 @@ server.use(cors());
 
 passportJwt(passport);
 
-const dbURL = "mongodb+srv://Admin:katatonia@cluster.dinns.mongodb.net/finalproject?retryWrites=true&w=majority"
+const dbURL = process.env.DB_URL; 
 
 mongoose.connect(
     dbURL, 
