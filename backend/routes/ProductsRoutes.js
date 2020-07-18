@@ -3,15 +3,18 @@ const router = express.Router();
 const ProductsModel = require('../models/ProductsModel');
 
 router.post(
-    '/',
+    '/products',
     (req, res) => {
         const formData = {
-            brand: req.body.brand, 
-            model: req.body.model,
+            salonName: req.body.salonName, 
+            description: req.body.description,
+            salonImage: req.body.salonImage,
+            salonBranches: req.body.salonBranches,
             price: req.body.price,
-            quantity: req.body.quantity,
-            image: req.body.image,
-            description: req.body.description
+            clientsReview: req.body.clientsReview,
+            location: req.body.location,
+            review: req.body.review,
+
         };
         console.log(
             'From the user', formData
@@ -27,14 +30,14 @@ router.post(
     '/update',
     (req, res) => {
         const formData = {
-            quantity: req.body.quantity,
+            price: req.body.price,
             _id: req.body._id
         };
 
         ProductsModel
         .findOneAndUpdate(
             { _id: formData._id }, 
-            { quantity: formData.quantity }, 
+            { price: formData.price }, 
             {}, 
             (err, document) => {
 
