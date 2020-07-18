@@ -25,7 +25,10 @@ const ProductsSchema = new mongoose.Schema (
             type: Number,
             required: true
         },
-        
+        review: {
+            type: Number,
+            required: true
+        }
     }
 );
 

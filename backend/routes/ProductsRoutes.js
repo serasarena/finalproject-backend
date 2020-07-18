@@ -11,7 +11,10 @@ router.post(
             salonImage: req.body.salonImage,
             salonBranches: req.body.salonBranches,
             price: req.body.price,
-            clientsReview: req.body.clientsReview
+            clientsReview: req.body.clientsReview,
+            location: req.body.location,
+            review: req.body.review,
+
         };
         console.log(
             'From the user', formData
@@ -27,14 +30,14 @@ router.post(
     '/update',
     (req, res) => {
         const formData = {
-            quantity: req.body.quantity,
+            price: req.body.price,
             _id: req.body._id
         };
 
         ProductsModel
         .findOneAndUpdate(
             { _id: formData._id }, 
-            { quantity: formData.quantity }, 
+            { price: formData.price }, 
             {}, 
             (err, document) => {
 
