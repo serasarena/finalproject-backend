@@ -13,7 +13,7 @@ const [state, setState] = useState({ products: []});
   useEffect(
     () => {
       if(globalState.loggedIn === true) {
-        fetch('http://localhost:8081/products')
+        fetch(`${process.env.REACT_APP_API_URL}products`)
         .then(
           (result)=>result.json()
         )
