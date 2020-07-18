@@ -63,7 +63,7 @@ const RegistrationPage = () => {
             )
         }
 
-        fetch('http://localhost:8081/users/register', {
+        fetch(`${process.env.REACT_APP_API_URL}`, {
             method: 'POST',
             body: JSON.stringify({
                 firstName: firstNameField.value,
