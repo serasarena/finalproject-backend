@@ -6,13 +6,15 @@ router.post(
     '/products',
     (req, res) => {
         const formData = {
-            salon: req.body.salon, 
+            salonName: req.body.salonName, 
             description: req.body.description,
-            image: req.body.image,
-            style: req.body.style,
+            salonImage: req.body.salonImage,
+            salonBranches: req.body.salonBranches,
             price: req.body.price,
+            clientsReview: req.body.clientsReview,
             location: req.body.location,
-            review: req.body.review
+            review: req.body.review,
+
         };
         console.log(
             'From the user', formData
