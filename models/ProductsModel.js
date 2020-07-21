@@ -13,15 +13,11 @@ const ProductsSchema = new mongoose.Schema (
         salonImage: {
             type: String,
         },
-        salonBranches: {
+        location: {
             type: String, 
             required: true
         },
         price: {
-            type: Number,
-            required: true
-        },
-        clientsReview: {
             type: Number,
             required: true
         },
