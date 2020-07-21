@@ -30,3 +30,6 @@ const ProductsSchema = new mongoose.Schema (
 
 const ProductsModel = mongoose.model('products', ProductsSchema);
 module.exports = ProductsModel; 
+
+//added .env file
+// matched product keys from models and routes
