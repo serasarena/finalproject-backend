@@ -9,10 +9,8 @@ router.post(
             salonName: req.body.salonName, 
             description: req.body.description,
             salonImage: req.body.salonImage,
-            salonBranches: req.body.salonBranches,
-            price: req.body.price,
-            clientsReview: req.body.clientsReview,
             location: req.body.location,
+            price: req.body.price,
             review: req.body.review,
 
         };
